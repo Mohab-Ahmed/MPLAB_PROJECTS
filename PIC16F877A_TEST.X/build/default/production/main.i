@@ -1737,25 +1737,23 @@ extern __bank0 __bit __timeout;
 #pragma config WRT = OFF
 #pragma config CP = OFF
 # 10 "main.c" 2
-
-
-
+# 36 "main.c"
 void main(void) {
-    TRISBbits.TRISB0=1;
-    TRISBbits.TRISB1=0;
-    PORTBbits.RB1=0;
+    TRISB0=1;
+    TRISB1=0;
+    RB1=0;
 
     while(1)
     {
-        if(PORTBbits.RB0)
+        if(RB0)
         {
-            PORTBbits.RB1=1;
+            RB1=1;
             _delay((unsigned long)((250)*(4000000/4000.0)));
-            PORTBbits.RB1=0;
+            RB1=0;
             _delay((unsigned long)((250)*(4000000/4000.0)));
         }
         else
-            PORTBbits.RB1=0;
+            RB1=0;
 
     }
     return;

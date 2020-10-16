@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.30\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\PIC16F877A_TEST.X.production.sym \
   --cmf=dist/default/production\PIC16F877A_TEST.X.production.cmf -z \
-  -Q16F877A -oC:\Users\mohab\AppData\Local\Temp\sj40x2 \
+  -Q16F877A -oC:\Users\mohab\AppData\Local\Temp\sdr0x2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/PIC16F877A_TEST.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
@@ -19,7 +19,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\mohab\AppData\Local\Temp\sj40xb.o \
+  -pfunctab=ENTRY -k C:\Users\mohab\AppData\Local\Temp\sdr0xb.o \
   dist/default/production\PIC16F877A_TEST.X.production.o 
 
 Object code version is 3.11
@@ -29,7 +29,7 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\mohab\AppData\Local\Temp\sj40xb.o
+C:\Users\mohab\AppData\Local\Temp\sdr0xb.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1        0       4
 dist/default/production\PIC16F877A_TEST.X.production.o
@@ -127,8 +127,10 @@ UNUSED ADDRESS RANGES
 
                                   Symbol Table
 
-_PORTBbits               (abs)        0006
-_TRISBbits               (abs)        0086
+_RB0                     (abs)        0030
+_RB1                     (abs)        0031
+_TRISB0                  (abs)        0430
+_TRISB1                  (abs)        0431
 __Habs1                  abs1         0000
 __Hbank0                 bank0        0000
 __Hbank1                 bank1        0000
@@ -227,7 +229,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 13 in file "main.c"
+		line 36 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
